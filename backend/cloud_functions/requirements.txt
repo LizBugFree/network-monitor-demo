@@ -1,0 +1,10 @@
+functions-framework==3.4.0
+google-cloud-compute==1.14.1
+google-cloud-monitoring==2.15.1
+google-cloud-firestore==2.11.1
+google-cloud-logging==3.8.0
+protobuf==4.24.4
+ipaddress==1.0.23
+
+pytest==7.4.2
+requests==2.31.0

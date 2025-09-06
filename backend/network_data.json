@@ -1,0 +1,139 @@
+{
+  "collection_timestamp": "2025-08-24T17:42:51.785567",
+  "project_id": "network-monitor-demo-469916",
+  "networks": [
+    {
+      "name": "default",
+      "id": 1778026677306415457,
+      "self_link": "https://www.googleapis.com/compute/v1/projects/network-monitor-demo-469916/global/networks/default",
+      "auto_create_subnetworks": true,
+      "routing_mode": "REGIONAL",
+      "creation_timestamp": "2025-08-23T09:08:46.389-07:00"
+    }
+  ],
+  "subnets": [
+    {
+      "name": "default",
+      "region": "us-central1",
+      "network": "default",
+      "ip_cidr_range": "10.128.0.0/20",
+      "gateway_address": "10.128.0.1",
+      "private_ip_google_access": false,
+      "creation_timestamp": "2025-08-23T09:08:53.728-07:00"
+    },
+    {
+      "name": "default",
+      "region": "us-east1",
+      "network": "default",
+      "ip_cidr_range": "10.142.0.0/20",
+      "gateway_address": "10.142.0.1",
+      "private_ip_google_access": false,
+      "creation_timestamp": "2025-08-23T09:08:53.780-07:00"
+    },
+    {
+      "name": "default",
+      "region": "us-west1",
+      "network": "default",
+      "ip_cidr_range": "10.138.0.0/20",
+      "gateway_address": "10.138.0.1",
+      "private_ip_google_access": false,
+      "creation_timestamp": "2025-08-23T09:08:53.787-07:00"
+    },
+    {
+      "name": "default",
+      "region": "europe-west1",
+      "network": "default",
+      "ip_cidr_range": "10.132.0.0/20",
+      "gateway_address": "10.132.0.1",
+      "private_ip_google_access": false,
+      "creation_timestamp": "2025-08-23T09:08:53.945-07:00"
+    }
+  ],
+  "firewall_rules": [
+    {
+      "name": "default-allow-icmp",
+      "direction": "INGRESS",
+      "priority": 65534,
+      "network": "default",
+      "source_ranges": [
+        "0.0.0.0/0"
+      ],
+      "target_tags": [],
+      "allowed": [
+        {
+          "protocol": "icmp",
+          "ports": []
+        }
+      ],
+      "creation_timestamp": "2025-08-23T09:09:16.021-07:00"
+    },
+    {
+      "name": "default-allow-internal",
+      "direction": "INGRESS",
+      "priority": 65534,
+      "network": "default",
+      "source_ranges": [
+        "10.128.0.0/9"
+      ],
+      "target_tags": [],
+      "allowed": [
+        {
+          "protocol": "tcp",
+          "ports": [
+            "0-65535"
+          ]
+        },
+        {
+          "protocol": "udp",
+          "ports": [
+            "0-65535"
+          ]
+        },
+        {
+          "protocol": "icmp",
+          "ports": []
+        }
+      ],
+      "creation_timestamp": "2025-08-23T09:09:15.955-07:00"
+    },
+    {
+      "name": "default-allow-rdp",
+      "direction": "INGRESS",
+      "priority": 65534,
+      "network": "default",
+      "source_ranges": [
+        "0.0.0.0/0"
+      ],
+      "target_tags": [],
+      "allowed": [
+        {
+          "protocol": "tcp",
+          "ports": [
+            "3389"
+          ]
+        }
+      ],
+      "creation_timestamp": "2025-08-23T09:09:16.000-07:00"
+    },
+    {
+      "name": "default-allow-ssh",
+      "direction": "INGRESS",
+      "priority": 65534,
+      "network": "default",
+      "source_ranges": [
+        "0.0.0.0/0"
+      ],
+      "target_tags": [],
+      "allowed": [
+        {
+          "protocol": "tcp",
+          "ports": [
+            "22"
+          ]
+        }
+      ],
+      "creation_timestamp": "2025-08-23T09:09:15.977-07:00"
+    }
+  ],
+  "instances": []
+}

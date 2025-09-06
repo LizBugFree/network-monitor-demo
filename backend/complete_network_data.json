@@ -1,0 +1,255 @@
+{
+  "collection_timestamp": "2025-08-24T17:52:44.569859",
+  "project_id": "network-monitor-demo-469916",
+  "networks": [
+    {
+      "name": "default",
+      "id": 1778026677306415457,
+      "self_link": "https://www.googleapis.com/compute/v1/projects/network-monitor-demo-469916/global/networks/default",
+      "auto_create_subnetworks": true,
+      "routing_mode": "REGIONAL",
+      "creation_timestamp": "2025-08-23T09:08:46.389-07:00"
+    }
+  ],
+  "subnets": [
+    {
+      "name": "default",
+      "region": "us-central1",
+      "network": "default",
+      "ip_cidr_range": "10.128.0.0/20",
+      "gateway_address": "10.128.0.1",
+      "private_ip_google_access": false,
+      "creation_timestamp": "2025-08-23T09:08:53.728-07:00"
+    },
+    {
+      "name": "default",
+      "region": "us-east1",
+      "network": "default",
+      "ip_cidr_range": "10.142.0.0/20",
+      "gateway_address": "10.142.0.1",
+      "private_ip_google_access": false,
+      "creation_timestamp": "2025-08-23T09:08:53.780-07:00"
+    },
+    {
+      "name": "default",
+      "region": "us-west1",
+      "network": "default",
+      "ip_cidr_range": "10.138.0.0/20",
+      "gateway_address": "10.138.0.1",
+      "private_ip_google_access": false,
+      "creation_timestamp": "2025-08-23T09:08:53.787-07:00"
+    },
+    {
+      "name": "default",
+      "region": "europe-west1",
+      "network": "default",
+      "ip_cidr_range": "10.132.0.0/20",
+      "gateway_address": "10.132.0.1",
+      "private_ip_google_access": false,
+      "creation_timestamp": "2025-08-23T09:08:53.945-07:00"
+    }
+  ],
+  "firewall_rules": [
+    {
+      "name": "default-allow-icmp",
+      "direction": "INGRESS",
+      "priority": 65534,
+      "network": "default",
+      "source_ranges": [
+        "0.0.0.0/0"
+      ],
+      "target_tags": [],
+      "allowed": [
+        {
+          "protocol": "icmp",
+          "ports": []
+        }
+      ],
+      "creation_timestamp": "2025-08-23T09:09:16.021-07:00"
+    },
+    {
+      "name": "default-allow-internal",
+      "direction": "INGRESS",
+      "priority": 65534,
+      "network": "default",
+      "source_ranges": [
+        "10.128.0.0/9"
+      ],
+      "target_tags": [],
+      "allowed": [
+        {
+          "protocol": "tcp",
+          "ports": [
+            "0-65535"
+          ]
+        },
+        {
+          "protocol": "udp",
+          "ports": [
+            "0-65535"
+          ]
+        },
+        {
+          "protocol": "icmp",
+          "ports": []
+        }
+      ],
+      "creation_timestamp": "2025-08-23T09:09:15.955-07:00"
+    },
+    {
+      "name": "default-allow-rdp",
+      "direction": "INGRESS",
+      "priority": 65534,
+      "network": "default",
+      "source_ranges": [
+        "0.0.0.0/0"
+      ],
+      "target_tags": [],
+      "allowed": [
+        {
+          "protocol": "tcp",
+          "ports": [
+            "3389"
+          ]
+        }
+      ],
+      "creation_timestamp": "2025-08-23T09:09:16.000-07:00"
+    },
+    {
+      "name": "default-allow-ssh",
+      "direction": "INGRESS",
+      "priority": 65534,
+      "network": "default",
+      "source_ranges": [
+        "0.0.0.0/0"
+      ],
+      "target_tags": [],
+      "allowed": [
+        {
+          "protocol": "tcp",
+          "ports": [
+            "22"
+          ]
+        }
+      ],
+      "creation_timestamp": "2025-08-23T09:09:15.977-07:00"
+    }
+  ],
+  "instances": [],
+  "metrics": {
+    "sample_instance": {
+      "compute.googleapis.com/instance/network/received_bytes_count": [
+        {
+          "timestamp": "2025-08-24T17:52:48.936029",
+          "value": 1000000
+        },
+        {
+          "timestamp": "2025-08-24T17:47:48.936029",
+          "value": 1050000
+        },
+        {
+          "timestamp": "2025-08-24T17:42:48.936029",
+          "value": 1100000
+        },
+        {
+          "timestamp": "2025-08-24T17:37:48.936029",
+          "value": 1150000
+        },
+        {
+          "timestamp": "2025-08-24T17:32:48.936029",
+          "value": 1200000
+        },
+        {
+          "timestamp": "2025-08-24T17:27:48.936029",
+          "value": 1250000
+        },
+        {
+          "timestamp": "2025-08-24T17:22:48.936029",
+          "value": 1300000
+        },
+        {
+          "timestamp": "2025-08-24T17:17:48.936029",
+          "value": 1350000
+        },
+        {
+          "timestamp": "2025-08-24T17:12:48.936029",
+          "value": 1400000
+        },
+        {
+          "timestamp": "2025-08-24T17:07:48.936029",
+          "value": 1450000
+        },
+        {
+          "timestamp": "2025-08-24T17:02:48.936029",
+          "value": 1500000
+        },
+        {
+          "timestamp": "2025-08-24T16:57:48.936029",
+          "value": 1550000
+        }
+      ],
+      "compute.googleapis.com/instance/network/sent_bytes_count": [
+        {
+          "timestamp": "2025-08-24T17:52:48.936029",
+          "value": 1000000
+        },
+        {
+          "timestamp": "2025-08-24T17:47:48.936029",
+          "value": 1050000
+        },
+        {
+          "timestamp": "2025-08-24T17:42:48.936029",
+          "value": 1100000
+        },
+        {
+          "timestamp": "2025-08-24T17:37:48.936029",
+          "value": 1150000
+        },
+        {
+          "timestamp": "2025-08-24T17:32:48.936029",
+          "value": 1200000
+        },
+        {
+          "timestamp": "2025-08-24T17:27:48.936029",
+          "value": 1250000
+        },
+        {
+          "timestamp": "2025-08-24T17:22:48.936029",
+          "value": 1300000
+        },
+        {
+          "timestamp": "2025-08-24T17:17:48.936029",
+          "value": 1350000
+        },
+        {
+          "timestamp": "2025-08-24T17:12:48.936029",
+          "value": 1400000
+        },
+        {
+          "timestamp": "2025-08-24T17:07:48.936029",
+          "value": 1450000
+        },
+        {
+          "timestamp": "2025-08-24T17:02:48.936029",
+          "value": 1500000
+        },
+        {
+          "timestamp": "2025-08-24T16:57:48.936029",
+          "value": 1550000
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_networks": 1,
+    "total_subnets": 4,
+    "total_instances": 0,
+    "total_firewall_rules": 4
+  },
+  "insights": {
+    "security": [
+      "\u26a0\ufe0f  Firewall rule 'default-allow-ssh' allows SSH from anywhere (0.0.0.0/0)"
+    ],
+    "cost": []
+  }
+}
